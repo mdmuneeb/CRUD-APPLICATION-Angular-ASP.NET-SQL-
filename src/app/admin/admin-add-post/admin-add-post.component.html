@@ -1,0 +1,89 @@
+<div class="container" *ngIf="post">
+  <br />
+  <br />
+  <h1>Add Blog</h1>
+  <br /><br />
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <div class="mb-3">
+      <label class="form-label">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        name="title"
+        [(ngModel)]="post.title"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Content</label>
+      <textarea
+        name="content"
+        class="form-control"
+        cols="92"
+        rows="2"
+        [(ngModel)]="post.context"
+      ></textarea>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Featured Image URL</label>
+      <input
+        name="featuredImageUrl"
+        cols="92"
+        class="form-control"
+        rows="2"
+        [(ngModel)]="post.featuredImageUrl"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Author</label>
+      <input name="auther" class="form-control" [(ngModel)]="post.author" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">URL Handle</label>
+      <input
+        type="text"
+        name="urlHandle"
+        class="form-control"
+        [(ngModel)]="post.urlHandle"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Summary</label>
+      <input
+        type="text"
+        name="summary"
+        class="form-control"
+        [(ngModel)]="post.summary"
+      />
+    </div>
+    <div class="form-check mb-3">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        name="visible"
+        [(ngModel)]="post.visible"
+      />
+      <label class="form-check-label"> Visible </label>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Publish Date</label>
+      <input
+        class="form-control"
+        name="title"
+        type="datetime"
+        [(ngModel)]="post.publishDate"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Updated Date</label>
+      <input
+        type="text"
+        name="updatedDate"
+        class="form-control"
+        [(ngModel)]="post.updatedDate"
+      />
+    </div>
+    <div class="mb-3">
+      <button class="btn btn-primary">Save</button>
+    </div>
+  </form>
+</div>

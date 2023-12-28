@@ -7,12 +7,14 @@ import { AdminPostsComponent } from './admin/admin-posts/admin-posts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminBlockPostComponent } from './admin/admin-block-post/admin-block-post.component';
 import { FormsModule } from '@angular/forms';
+import { AdminAddPostComponent } from './admin/admin-add-post/admin-add-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminPostsComponent,
-    AdminBlockPostComponent
+    AdminBlockPostComponent,
+    AdminAddPostComponent
   ],
   imports: [
     BrowserModule,
